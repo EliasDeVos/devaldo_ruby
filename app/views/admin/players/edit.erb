@@ -1,0 +1,19 @@
+<%= form_for @player, url:  admin_player_path do |p| %>
+    <p>
+        <%= p.label :first_name %><br>
+        <%= p.text_field :first_name %><br>
+    </p>
+    <p>
+        <%= p.label :last_name %><br>
+        <%= p.text_field :last_name %><br>
+    </p>
+    <p>
+        <%= p.label :image %><br>
+        <%= p.file_field :image %><br>
+    </p>
+        <%= p.submit %>
+    <p>
+    </p>
+<% end %>
+
+<%= link_to 'Back', admin_players_path %>

@@ -1,0 +1,16 @@
+<p>
+  <strong>First_name:</strong>
+  <%= @player.first_name %>
+</p>
+
+<p>
+  <strong>Last_name:</strong>
+  <%= @player.last_name %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@player.image_url.to_s) %>
+</p>
+<p>
+  <%= link_to 'Index', admin_players_path %>
+</p>

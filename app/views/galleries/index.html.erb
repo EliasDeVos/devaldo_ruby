@@ -1,0 +1,27 @@
+<div class="gallery">
+    <div class="container">
+        <h3>Gallery</h3>
+        <div class="gallery-grids">
+            <% @galleries.each do |gallery| %>
+                <div class="col-md-4 work-grid">
+                    <div id="nivo-lightbox-demo">
+                        <a  href="<% gallery.image_url.to_s %>" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo">
+                            <%= image_tag(gallery.image_url.to_s, :class => "img-responsive") %>
+                            <div class="rotate">
+                                <span class="glyphicon glyphicon-search gl-icn" aria-hidden="true"></span>
+                            </div>
+                         </a>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#nivo-lightbox-demo a').nivoLightbox({ effect: 'fade' });
+        });
+        </script>
+    <!---->
+</div>

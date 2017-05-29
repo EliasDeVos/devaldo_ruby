@@ -1,0 +1,18 @@
+ <!--trainers-->
+<div class="our-players">
+    <div class="container">
+        <h3>Spelers</h3>
+        <div class="row">
+            <% @players.each do |player| %>
+                <div class="col-md-4 trainer-grid-text">
+                    <div class="ch-item ch-img-1" style="background-image: url(<%= player.image_url.to_s %>)">
+                        <div class="ch-info">
+                            <h3><%= player.first_name + ' ' + player.last_name %></h3>
+                        </div>
+                   </div>
+                    <p></p>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

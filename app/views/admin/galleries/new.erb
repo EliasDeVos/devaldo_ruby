@@ -1,0 +1,15 @@
+<%= form_for :gallery, url:  admin_galleries_path do |f| %>
+    <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title %><br>
+    </p>
+    <p>
+        <%= f.label :image %><br>
+        <%= f.file_field :image %><br>
+    </p>
+        <%= f.submit %>
+    <p>
+    </p>
+<% end %>
+
+<%= link_to 'Back', admin_galleries_path %>
