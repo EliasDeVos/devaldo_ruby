@@ -1,0 +1,39 @@
+<div class="stats-tabs">
+    <div class="container">
+        <div class="col-md-12">
+            <h2>Klassement</h2>
+            <p>
+                <strong>KGDP4H - reguliere competitie</strong>
+            </p>
+            <table class="table table-bordered klassement">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th class="left">Ploeg</th>
+                        <th class="">GS</th>
+                        <th class="hidden-xs">W</th>
+                        <th class="hidden-xs">V</th>
+                        <th class="hidden-xs">G</th>
+                        <th class="hidden-xs">+</th>
+                        <th class="hidden-xs">-</th>
+                        <th>Totaal</th>
+                    </tr>
+
+                    <% @statistics.each_with_index do |statistic, i| %>
+                        <tr>
+                            <td class="right"><%= i%></td>
+                            <td class="left"><%= statistic.name %></td>
+                            <td class=""><%= statistic.games %></td>
+                            <td class="hidden-xs"><%= statistic.wins %></td>
+                            <td class="hidden-xs"><%= statistic.losses %></td>
+                            <td class="hidden-xs"><%= statistic.draws %></td>
+                            <td class="hidden-xs"><%= statistic.goalsFor %></td>
+                            <td class="hidden-xs"><%= statistic.goalsAgainst %></td>
+                            <td><%= statistic.points %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
