@@ -22,12 +22,12 @@ namespace :score do
     Statistic.delete_all
     rows.map do |row|
         row_values = row.css('td').map(&:text)
-        row_team = row.css('td.ploegnaam').text(&:text).gsub("\n", ' ').gsub("\r", ' ').squeeze(' ')
+        row_team = row.css('td.ploegnaam').text(&:text).gsub("\n", ' ').gsub("\r", ' ').squeeze(' ').strip()
         if !row_team.to_s.empty?
             statistic = Statistic.create(name: row_team)
             row_values.each_with_index do |row_value, i|
                 if (mapping.has_key?(i))
-                    statistic[mapping[i]] = row_value.gsub("\n", ' ').gsub("\r", ' ').squeeze(' ')
+                    statistic[mapping[i]] = row_value.gsub("\n", ' ').gsub("\r", ' ').squeeze(' ').strip()
                 end
             end
             statistic.save
