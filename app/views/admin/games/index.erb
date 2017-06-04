@@ -1,0 +1,22 @@
+<h1>Games</h1>
+
+<%= link_to 'New', new_admin_game_path %>
+<table>
+  <tr>
+    <th>HomeTeam</th>
+    <th>Score</th>
+    <th>AwayTeam</th>
+  </tr>
+
+  <% @games.each do |game| %>
+    <tr>
+      <td><%= game.homeTeam %></td>
+      <td><%= game.score %></td>
+      <td><%= game.awayTeam %></td>
+      <td><%= link_to 'Show', admin_game_path(game) %></td>
+      <td><%= link_to 'Edit', edit_admin_game_path(game) %></td>
+      <td><%= link_to 'Delete', admin_game_path(game), :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+

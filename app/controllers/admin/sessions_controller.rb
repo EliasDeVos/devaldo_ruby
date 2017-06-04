@@ -1,6 +1,7 @@
 class Admin::SessionsController < Admin::AdminController
     skip_before_action :require_admin, only: [:new, :create]
     def new
+        render :layout => false
     end
 
     def create
@@ -15,5 +16,7 @@ class Admin::SessionsController < Admin::AdminController
     end
 
     def destroy
+        log_out
+        redirect_to admin_path
     end
 end
