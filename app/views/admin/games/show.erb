@@ -1,0 +1,27 @@
+<p>
+  <strong>Home team:</strong>
+  <%= @game.homeTeam %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @game.score %>
+</p>
+
+<p>
+  <strong>Away team:</strong>
+  <%= @game.awayTeam %>
+</p>
+
+<p>
+  <strong>description</strong>
+  <%= @game.description %>
+</p>
+<p>
+    <% @game.attachment.each do |attachment| %>
+        <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
+    <% end %>
+</p>
+<p>
+  <%= link_to 'Index', admin_games_path %>
+</p>

@@ -10,8 +10,7 @@
   <% @galleries.each do |gallery| %>
     <tr>
       <td><%= gallery.title %></td>
-      <td><%= image_tag(gallery.image_url.to_s) %></td>
-      <td><%= link_to 'Show', admin_gallery_path(gallery) %></td>
+      <td><%= image_tag(gallery.image_url.to_s, :width => "200", :height => "200") %></td>
       <td><%= link_to 'Edit', edit_admin_gallery_path(gallery) %></td>
       <td><%= link_to 'Delete', admin_gallery_path(gallery), :method => :delete %></td>
     </tr>

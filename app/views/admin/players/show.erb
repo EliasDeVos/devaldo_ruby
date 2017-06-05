@@ -9,7 +9,7 @@
 </p>
 <p>
   <strong>Image:</strong>
-  <%= image_tag(@player.image_url.to_s) %>
+  <%= image_tag(@player.image_url.to_s, :width => "200", :height => "200") %>
 </p>
 <p>
   <%= link_to 'Index', admin_players_path %>
