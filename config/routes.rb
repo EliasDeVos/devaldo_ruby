@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'static/index'
   get '/gallerij', to: 'galleries#index'
   get '/uitslagen', to: 'statistics#index'
+  resources :games, :only => [:show]
 
   root 'static#index'
 
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
     resources :players
     resources :galleries
     resources :games
+    resources :attachments
     get '/login', to: 'sessions#new'
     post '/login', to: 'sessions#create'
     delete '/logout', to: 'sessions#destroy'

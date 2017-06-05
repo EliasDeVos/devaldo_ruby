@@ -1,0 +1,13 @@
+<div>
+    <%= @game.homeTeam %>
+    <%= @game.score %>
+    <%= @game.awayTeam %>
+</div>
+<div>
+    <%= @game.description %>
+</div>
+<div>
+    <% @game.attachment.each do |attachment| %>
+        <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
+    <% end %>
+</div>

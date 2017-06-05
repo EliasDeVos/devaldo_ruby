@@ -1,0 +1,20 @@
+<h1>Attachments</h1>
+
+<%= link_to 'New', new_admin_attachment_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+  </tr>
+
+  <% @attachments.each do |attachment| %>
+    <tr>
+      <td><%= attachment.name %></td>
+      <td><%= image_tag(attachment.image_url.to_s) %></td>
+      <td><%= link_to 'Show', admin_attachment_path(attachment) %></td>
+      <td><%= link_to 'Edit', edit_admin_attachment_path(attachment) %></td>
+      <td><%= link_to 'Delete', admin_attachment_path(attachment), :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+

@@ -1,0 +1,16 @@
+<p>
+  <strong>Name:</strong>
+  <%= @attachment.name %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @attachment.game.name %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@attachment.image_url.to_s) %>
+</p>
+<p>
+  <%= link_to 'Index', admin_attachments_path %>
+</p>
