@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
-    has_many :message
-    has_many :attachment 
+    has_many :messages
+    has_many :attachments
 
     def name
         [homeTeam, awayTeam].join(' ')

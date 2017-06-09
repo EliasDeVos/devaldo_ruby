@@ -7,7 +7,11 @@
     <%= @game.description %>
 </div>
 <div>
-    <% @game.attachment.each do |attachment| %>
+    <% @game.attachments.each do |attachment| %>
         <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
     <% end %>
 </div>
+<div class="js-messages" data-game-id="<%= @game.id %>">
+    <%= render @game.messages %>
+</div>
+<%= render 'messages/new', game: @game %>

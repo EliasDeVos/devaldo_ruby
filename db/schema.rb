@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605092810) do
+ActiveRecord::Schema.define(version: 20170608154720) do
 
   create_table "attachments", force: :cascade do |t|
     t.string "name"
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20170605092810) do
   create_table "messages", force: :cascade do |t|
     t.string "user"
     t.text "message"
-    t.integer "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "game_id"
   end
 
   create_table "players", force: :cascade do |t|

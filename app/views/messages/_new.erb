@@ -1,0 +1,16 @@
+<div>
+  <%= form_for @message, url: game_messages_path(@game), remote: true do |f| %>
+    <%= f.label :message %>:
+    <%= f.text_area :message, data: {textarea: "message"} %>
+    <%= f.label :user %>:
+    <%= f.text_field :user %>
+  
+    <%= f.hidden_field :game_id, value: @game.id %>
+    <%= f.submit "send" %>
+    <% @message.errors.messages.each do |attr, msg| %>
+      <% if !msg.empty? %>
+        <%= attr.to_s %> -- <%= msg.to_s %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

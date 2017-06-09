@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   get 'static/index'
   get '/gallerij', to: 'galleries#index'
   get '/uitslagen', to: 'statistics#index'
-  resources :games, :only => [:show]
+  resources :games, :only => [:show] do
+    resources :messages
+  end
+
+  mount ActionCable.server => '/cable'
 
   root 'static#index'
 
