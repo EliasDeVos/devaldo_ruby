@@ -1,17 +1,31 @@
-<div>
-    <%= @game.homeTeam %>
-    <%= @game.score %>
-    <%= @game.awayTeam %>
+<div class="container text-center">
+    <h1><%= @game.homeTeam %> - <%= @game.awayTeam %> (<%= @game.score %> )</h1>
+    <div>
+        <p>
+        <%= @game.description %>
+        </p>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h3>
+        Afbeeldingen van de match
+    </h3>
+    <div>
+        <% @game.attachments.each do |attachment| %>
+            <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
+        <% end %>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h3>
+       Laat een reactie achter!
+    </h3>
+    <div class="js-messages" data-game-id="<%= @game.id %>">
+        <%= render @game.messages %>
+    </div>
+    <%= render 'messages/new', game: @game %>
 </div>
-<div>
-    <%= @game.description %>
-</div>
-<div>
-    <% @game.attachments.each do |attachment| %>
-        <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
-    <% end %>
-</div>
-<div class="js-messages" data-game-id="<%= @game.id %>">
-    <%= render @game.messages %>
-</div>
-<%= render 'messages/new', game: @game %>

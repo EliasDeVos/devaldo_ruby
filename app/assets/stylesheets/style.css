@@ -98,6 +98,9 @@ svg#bigTriangleColor {
 }
 /* big triangle ends here */
 .header-top{
+    background-size: cover;
+}
+.header-top-image{
     background: url(../images/g2.jpg)0px -80px;
     background-size: cover;
     min-height: 730px;
