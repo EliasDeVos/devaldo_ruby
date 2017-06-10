@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
     @game = Game.find(params[:game_id])
     @message = Message.new(message_params)
     if @message.save
-       ActionCable.server.broadcast "messages_channel",
+       ActionCable.server.broadcast "messages_#{@game.id}_channel",
          message: @message.message,
          user: @message.user
     else
