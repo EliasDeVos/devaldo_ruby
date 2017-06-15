@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
        ActionCable.server.broadcast "messages_#{@game.id}_channel",
          message: @message.message,
          user: @message.user
+      @message = Message.new
     else
       respond_to do |f|
         f.html {redirect_to game_path($game)}
