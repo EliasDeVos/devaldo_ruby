@@ -11,7 +11,7 @@ class Admin::SessionsController < Admin::AdminController
             redirect_to admin_path
         else
             flash.now[:danger] = 'Invalid name and password'
-            render 'new'
+            render 'new', :layout => false
         end
     end
 
