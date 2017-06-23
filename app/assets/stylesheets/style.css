@@ -10,7 +10,7 @@ ul, ol, li{margin: 0; padding: 0;}
 p {margin: 0;padding: 0;}
 body{
 	margin:0;
-	padding:0;
+    padding-bottom: 100px
 }
 /*--fonts--*/
 @font-face{
@@ -68,7 +68,7 @@ body{
 /* General styles and layout */
 body {
 	margin:0;
-    padding: 0;
+    padding-bottom: 100px
 }
 section {
     position: relative;
@@ -411,10 +411,9 @@ div.re-pad2 {
 /*--footer--*/
 .footer{
     background: #000000;
-    position: absolute;
-    right: 0;
+    width: 100%;
+    position: fixed;
     bottom: 0;
-    left: 0;
     padding: 1rem;
 }
 a.ft-log,a.ft-log:hover {
@@ -1109,10 +1108,7 @@ div textarea{
     }
     .footer {
         background: #061208;
-        position: absolute;
-        right: 0;
         bottom: 0;
-        left: 0;
         padding: 1rem;
     }
     .about{
@@ -1219,4 +1215,11 @@ div textarea{
 table { table-layout: fixed; }
 td {
     width: 33%;
+}
+
+.footerz {
+    background: #000000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
