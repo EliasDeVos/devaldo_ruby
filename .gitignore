@@ -21,3 +21,8 @@
 /yarn-error.log
 
 .byebug_history
+
+#ignore public
+/public/uploads/attachment/*
+/public/uploads/gallery/*
+/public/uploads/player/*
