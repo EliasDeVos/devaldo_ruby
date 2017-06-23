@@ -1223,3 +1223,6 @@ td {
     bottom: 0;
     width: 100%;
 }
+.logo-header-nav>h1 a:hover {
+    background-color: #B22929;
+}
