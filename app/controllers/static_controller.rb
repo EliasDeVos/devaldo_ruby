@@ -7,6 +7,6 @@ class StaticController < ApplicationController
     end
 
     def calendar
-
+        @meetings = Meeting.all
     end
 end

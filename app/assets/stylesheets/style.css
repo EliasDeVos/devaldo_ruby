@@ -1212,3 +1212,11 @@ div textarea{
         margin-top: 20px;
     }
 }
+
+.today {
+    background-color: #B22929;
+}
+table { table-layout: fixed; }
+td {
+    width: 33%;
+}
