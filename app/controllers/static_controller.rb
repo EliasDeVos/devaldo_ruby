@@ -5,4 +5,8 @@ class StaticController < ApplicationController
         @statistic = Statistic.find_by(name: "Devaldo Rojo")
         @game = Game.order('created_at').last
     end
+
+    def calendar
+
+    end
 end

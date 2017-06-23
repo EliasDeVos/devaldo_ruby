@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'static/index'
   get '/gallerij', to: 'galleries#index'
   get '/uitslagen', to: 'statistics#index'
+  get '/kalender', to: 'static#calendar'
   resources :games, :only => [:show] do
     resources :messages
   end
