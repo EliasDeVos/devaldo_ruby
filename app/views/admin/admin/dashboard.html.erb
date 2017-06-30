@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h1>Dashboard</h1>
+    <h2>Welcome: <%= current_user.name + ' (' + current_user.email + ')' %><h2>
+
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Games: <%= @games %></h3>
+        </div>
+        <div class="col-md-3">
+            <h3>Players: <%= @players %></h3>
+        </div>
+        <div class="col-md-3">
+            <h3>Attachments: <%= @attachments %></h3>
+        </div>
+        <div class="col-md-3">
+            <h3>GalleryItems: <%= @galleries %></h3>
+        </div>
+    </div>
+</div>

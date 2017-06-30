@@ -3,6 +3,6 @@ class Game < ApplicationRecord
     has_many :attachments
 
     def name
-        [homeTeam, awayTeam].join(' ')
+        [homeTeam, awayTeam].join('-')
     end
 end

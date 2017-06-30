@@ -1,20 +1,24 @@
-<h1>Players</h1>
+<div class="container-fluid">
+    <h1>Players</h1>
 
-<%= link_to 'New', new_admin_player_path %>
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-  </tr>
+    <%= link_to 'New', new_admin_player_path, class: "btn btn-primary" %>
+    <table class="table table-striped">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Action</th>
+      </tr>
 
-  <% @players.each do |player| %>
-    <tr>
-      <td><%= player.first_name %></td>
-      <td><%= player.last_name %></td>
-      <td><%= link_to 'Show', admin_player_path(player) %></td>
-      <td><%= link_to 'Edit', edit_admin_player_path(player) %></td>
-      <td><%= link_to 'Delete', admin_player_path(player), :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-
+      <% @players.each do |player| %>
+        <tr>
+          <td><%= player.first_name %></td>
+          <td><%= player.last_name %></td>
+          <td>
+            <%= link_to 'Show', admin_player_path(player) %>
+            <%= link_to 'Edit', edit_admin_player_path(player) %>
+            <%= link_to 'Delete', admin_player_path(player), :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+</div>

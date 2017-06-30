@@ -10,5 +10,9 @@ class Admin::AdminController < ApplicationController
     end
 
     def dashboard
+        @players = Player.count
+        @games = Game.count
+        @attachments = Attachment.count
+        @galleries = Gallery.count
     end
 end

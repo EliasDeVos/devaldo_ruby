@@ -1,20 +1,47 @@
-<h1>Attachments</h1>
+<div class="container-fluid">
+    <h1>Attachments</h1>
 
-<%= link_to 'New', new_admin_attachment_path %>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Image</th>
-  </tr>
+    <%= link_to 'New', new_admin_attachment_path, class: "btn btn-primary" %>
+    <%= collection_select(
+        :game,
+        :game_id,
+        Game.all,
+        :id,
+        :name,
+        {
+            :selected => params['game_id'],
+            :include_blank => "Show all"
+        },
+    )%>
+    <table class="table table-striped">
+      <tr>
+        <th>name</th>
+        <th>Image</th>
+        <th>Game</th>
+        <th>Actions</th>
+      </tr>
 
-  <% @attachments.each do |attachment| %>
-    <tr>
-      <td><%= attachment.name %></td>
-      <td><%= image_tag(attachment.image_url.to_s, :width => "200", :height => "200") %></td>
-      <td><%= link_to 'Show', admin_attachment_path(attachment) %></td>
-      <td><%= link_to 'Edit', edit_admin_attachment_path(attachment) %></td>
-      <td><%= link_to 'Delete', admin_attachment_path(attachment), :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-
+      <% @attachments.each do |attachment| %>
+        <tr>
+          <td><%= attachment.name %></td>
+          <td><%= image_tag(attachment.image_url.to_s, :width => "200", :height => "200") %></td>
+          <td><%= attachment.game.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_attachment_path(attachment) %>
+            <%= link_to 'Delete', admin_attachment_path(attachment), :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#game_game_id').change(function() {
+            if ($(this).val()) {
+                document.location.href = "<%= url_for(:only_path => false) %>?game_id=" + $(this).val();
+            } else {
+                document.location.href = "<%= url_for(:only_path => false) %>";
+            }
+        });
+    });
+</script>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <h1>Edit Game</h1>
+    <div>
+        <%= form_for @game, url:  admin_game_path do |p| %>
+            <div class="form-group">
+                <%= p.label :homeTeam %>
+                <%= p.text_field :homeTeam, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :score %>
+                <%= p.text_field :score, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :awayTeam %>
+                <%= p.text_field :awayTeam, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :description %>
+                <%= p.text_area :description, class: 'form-control' %>
+            </div>
+                <%= p.submit 'Save game', class: 'btn btn-primary' %>
+                <%= link_to 'Back', admin_games_path, class: "btn btn-primary" %>
+            <p>
+            </p>
+        <% end %>
+    </div>
+</div>

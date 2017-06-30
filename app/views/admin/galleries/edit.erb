@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <h1>Edit Gallery</h1>
+    <div>
+        <%= form_for @gallery, url:  admin_gallery_path do |p| %>
+            <div class="form-group">
+                <%= p.label :title %>
+                <%= p.text_field :title, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :image %>
+                <%= p.file_field :image %>
+            </div>
+                <%= p.submit 'Save item', class: 'btn btn-primary' %>
+                <%= link_to 'Back', admin_galleries_path, class: "btn btn-primary" %>
+            <p>
+            </p>
+        <% end %>
+    </div>
+</div>

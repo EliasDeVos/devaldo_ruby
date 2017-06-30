@@ -1,19 +1,23 @@
-<h1>Galleries</h1>
+<div class="container-fluid">
+    <h1>Galleries</h1>
 
-<%= link_to 'New', new_admin_gallery_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Image</th>
-  </tr>
+    <%= link_to 'New', new_admin_gallery_path, class: "btn btn-primary" %>
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
 
-  <% @galleries.each do |gallery| %>
-    <tr>
-      <td><%= gallery.title %></td>
-      <td><%= image_tag(gallery.image_url.to_s, :width => "200", :height => "200") %></td>
-      <td><%= link_to 'Edit', edit_admin_gallery_path(gallery) %></td>
-      <td><%= link_to 'Delete', admin_gallery_path(gallery), :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
-
+      <% @galleries.each do |gallery| %>
+        <tr>
+          <td><%= gallery.title %></td>
+          <td><%= image_tag(gallery.image_url.to_s, :width => "200", :height => "200") %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_gallery_path(gallery) %>
+            <%= link_to 'Delete', admin_gallery_path(gallery), :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+</div>

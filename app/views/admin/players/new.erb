@@ -1,19 +1,23 @@
-<%= form_for :player, url:  admin_players_path do |p| %>
-    <p>
-        <%= p.label :first_name %><br>
-        <%= p.text_field :first_name %><br>
-    </p>
-    <p>
-        <%= p.label :last_name %><br>
-        <%= p.text_field :last_name %><br>
-    </p>
-    <p>
-        <%= p.label :image %><br>
-        <%= p.file_field :image %><br>
-    </p>
-        <%= p.submit %>
-    <p>
-    </p>
-<% end %>
-
-<%= link_to 'Back', admin_players_path %>
+<div class="container-fluid">
+    <h1>Add Player</h1>
+    <div>
+        <%= form_for :player, url:  admin_players_path do |p| %>
+            <div class="form-group">
+                <%= p.label :first_name %>
+                <%= p.text_field :first_name, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :last_name %>
+                <%= p.text_field :last_name, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :image %>
+                <%= p.file_field :image %>
+            </div>
+                <%= p.submit 'Save player', class: 'btn btn-primary' %>
+                <%= link_to 'Back', admin_players_path, class: "btn btn-primary" %>
+            <p>
+            </p>
+        <% end %>
+    </div>
+</div>

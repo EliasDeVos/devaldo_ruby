@@ -1,22 +1,26 @@
-<ul>
-    <li>
-        <%= link_to 'Dashboard', admin_path %>
-    </li>
-    <li>
-        <%= link_to 'Players', admin_players_path %>
-    </li>
-    <li>
-        <%= link_to 'Gallery', admin_galleries_path %>
-    </li>
-    <li>
-        <%= link_to 'Games', admin_games_path %>
-    </li>
-    <li>
-        <%= link_to 'Attachments', admin_attachments_path %>
-    </li>
-</ul>
-<ul>
-    <li>
-        <%= link_to 'Logout', admin_logout_path, :method => :delete %>
-    </li>
-</ul>
+<nav class="nav navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <%= link_to 'Dashboard', admin_path %>
+            </li>
+            <li>
+                <%= link_to 'Players', admin_players_path %>
+            </li>
+            <li>
+                <%= link_to 'Gallery', admin_galleries_path %>
+            </li>
+            <li>
+                <%= link_to 'Games', admin_games_path %>
+            </li>
+            <li>
+                <%= link_to 'Attachments', admin_attachments_path %>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <%= link_to 'Logout', admin_logout_path, :method => :delete %>
+            </li>
+        </ul>
+    </div>
+</nav>

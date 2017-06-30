@@ -1,6 +1,10 @@
 class Admin::AttachmentsController < Admin::AdminController
     def index
-        @attachments = Attachment.all
+        if params.has_key?(:game_id)
+            @attachments = Attachment.where(:game_id => params['game_id'])
+        else
+            @attachments = Attachment.all
+        end
     end
 
     def edit
@@ -22,6 +26,7 @@ class Admin::AttachmentsController < Admin::AdminController
 
         @attachment.save
         redirect_to admin_attachments_path
+
     end
 
     def delete
