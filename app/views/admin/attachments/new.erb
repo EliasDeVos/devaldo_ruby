@@ -6,9 +6,13 @@
                 <%= f.label :name %>
                 <%= f.text_field :name, class: 'form-control' %>
             </div>
-            <div class="form-group">
-                <%= collection_select(:attachment, :game_id, Game.all, :id, :name) %>
-            </div>
+            <% if params.has_key?(:game_id) %>
+                <%= f.hidden_field :game_id, class: 'form-control' %>
+            <% else %>
+                <div class="form-group">
+                    <%= collection_select(:attachment, :game_id, Game.all, :id, :name) %>
+                </div>
+            <% end %>
             <div class="form-group">
                 <%= f.label :image %>
                 <%= f.file_field :image %>

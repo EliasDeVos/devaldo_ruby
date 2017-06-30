@@ -25,7 +25,12 @@ class Admin::AttachmentsController < Admin::AdminController
         @attachment = Attachment.new(attachment_params)
 
         @attachment.save
-        redirect_to admin_attachments_path
+        if params.has_key?(:game_id)
+            @game = Game.find(params[:game_id])
+            redirect_to admin_game_path(game)
+        else
+            redirect_to admin_attachments_path
+        end
 
     end
 

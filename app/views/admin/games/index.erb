@@ -17,6 +17,7 @@
           <td><%= game.awayTeam %></td>
           <td>
             <%= link_to 'Show', admin_game_path(game) %>
+            <%= link_to 'Add Attachment', new_admin_attachment_path(:game_id => game.id) %>
             <%= link_to 'Edit', edit_admin_game_path(game) %>
             <%= link_to 'Delete', admin_game_path(game), :method => :delete %>
           </td>
