@@ -19,17 +19,16 @@
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav float-nav nav-algn_r">
-                            <!-- <li><a href="index.html" class="active">Home</a></li> -->
+                        <ul class="nav navbar-nav navbar-left float-nav nav-algn_r">
+                            <li><%= link_to 'Gallerij', gallerij_url %></li>
                             <li><%= link_to 'Uitslagen', uitslagen_path %></li>
-                            <!-- <li><a href="about.html">About</a></li> -->
                         </ul>
                         <div class="logo float-nav nav-algn_c logo-header-nav">
                             <h1><%= link_to 'Devaldo Rojo', root_path %></h1>
                         </div>
                         <ul class="nav navbar-nav navbar-right float-nav nav-algn_l">
-                            <li><%= link_to 'Gallerij', gallerij_url %></li>
-                            <!-- <li><a href="contact.html">Contact</a></li> -->
+                            <li><%= link_to 'Kalender', kalender_path %></li>
+                            <li><%= link_to 'Matchverslagen', allgames_path %></li>
                         </ul>
                         <div class="clearfix"></div>
                     </div><!-- /.navbar-collapse -->
