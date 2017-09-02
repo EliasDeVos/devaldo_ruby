@@ -27,7 +27,7 @@ body{
     margin:0 auto;
 }
 .nav-algn_r{
-    padding-left: 255px;
+    padding-left: 170px;
 }
 .nav-algn_c{
     text-align: center;
@@ -758,7 +758,7 @@ div textarea{
 /*--responsive-starts-here--*/
 @media screen and (max-width:1024px){
     .nav-algn_r {
-        padding-left: 255px;
+        padding-left: 170px;
     }
     .head-top-text h2 {
         font-weight: 400;
