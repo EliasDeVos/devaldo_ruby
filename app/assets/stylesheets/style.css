@@ -9,8 +9,7 @@ h1, h2, h3 {margin: 0;}
 ul, ol, li{margin: 0; padding: 0;}
 p {margin: 0;padding: 0;}
 body{
-	margin:0;
-    padding-bottom: 100px
+    margin:0;
 }
 /*--fonts--*/
 @font-face{
@@ -66,10 +65,6 @@ body{
     text-decoration: none;
 }
 /* General styles and layout */
-body {
-	margin:0;
-    padding-bottom: 100px
-}
 section {
     position: relative;
     padding: 0;
@@ -407,14 +402,6 @@ div.re-pad2 {
 .nutrn-icon {
     font-size: 35px;
     color: #4AAC5B;
-}
-/*--footer--*/
-.footer{
-    background: #000000;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    padding: 1rem;
 }
 a.ft-log,a.ft-log:hover {
     font-size: 30px !important;
@@ -1106,11 +1093,6 @@ div textarea{
     .cpyrt p{
         padding: 10px 0;
     }
-    .footer {
-        background: #061208;
-        bottom: 0;
-        padding: 1rem;
-    }
     .about{
         padding: 7em 0em 3em;
     }
@@ -1217,11 +1199,14 @@ td {
     width: 33%;
 }
 
-.footerz {
+.footer {
     background: #000000;
-    position: fixed;
+    position: relative;
+    right: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
 }
 .logo-header-nav>h1 a:hover {
     background-color: #B22929;
