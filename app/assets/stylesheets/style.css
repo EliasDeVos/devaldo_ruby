@@ -21,32 +21,30 @@ body{
 	src:url(../fonts/Pacifico/Pacifico.ttf) format('truetype');
 }
 /*--nav--set--*/
-.float-nav{
-    float: left;
-    width: 33.333%;
-    margin:0 auto;
-}
-.nav-algn_r{
-    padding-left: 170px;
-}
-.nav-algn_c{
-    text-align: center;
-}
 .navbar-default {
     background-color: #B22929;
     border: none !important;
     border-radius: 0 !important;
     margin: 0;
 }
-.navbar-default .navbar-nav>li>a {
+.nav {
+    display:inline-block;
+    width: 100%
+}
+.nav>li {
+    display: inline-block;
+    margin-top: 5px;
+}
+.nav>li>a {
     color: #fff;
     font-family: 'Nunito';
     font-size: 18px;
     font-weight: 400;
-    padding: 30px 15px;
+    padding: 0px 15px;
 }
-.navbar-default .navbar-nav>li>a:hover{
+.nav>li>a:hover{
     color: #061208;
+    background-color: #B22929;
     transition: 0.6s all;
 }
 .logo.displ_stn{
@@ -55,13 +53,16 @@ body{
 .logo {
     padding: 12px;
 }
-.logo h1 a{
+.logo-navbar {
+    padding: 12px;
+}
+.logo  h1 a, .logo-navbar h1 a{
     font-family: 'Pacifico', cursive;
     font-size: 45px;
     font-weight: 400;
     color: #fff;
 }
-.logo h1 a:hover {
+.logo h1 a:hover, .logo-navbar h1 a:hover {
     text-decoration: none;
 }
 /* General styles and layout */
@@ -83,27 +84,26 @@ section p {
 }
 /* Big Triangle */
 svg#bigTriangleColor {
-	pointer-events: none;
+    position: absolute;
+    pointer-events: none;
 }
 
 #bigTriangleColor path {
-	fill: #B22929;
-	stroke: #B22929;
-	stroke-width: 2;
+    fill: #B22929;
+    stroke: #B22929;
+    stroke-width: 2;
 }
 /* big triangle ends here */
 .header-top{
     background-size: cover;
 }
-.header-top-image{
-    background: url(../images/g2.jpg)0px -80px;
-    background-size: cover;
-    min-height: 730px;
+.homepage-img img {
+    width: 100%;
+    height: 100%;
 }
 .header-top-black{
     background-color: #fff;
     background-size: cover;
-    min-height: 730px;
 }
 .head-top-text {
     padding-top: 16em;
@@ -121,6 +121,9 @@ svg#bigTriangleColor {
     color: #FFFFFF;
     margin-bottom: 15px;
     line-height: 1.8em;
+}
+.under-triangle {
+    margin-top: 100px;
 }
 a.hd-more {
     background-color: #151C22;
@@ -775,13 +778,38 @@ div textarea{
     }
 }
 @media screen and (max-width:768px){
-    .header-top {
-        background: url(../images/g2.jpg)0px 82px;
-        background-size: cover;
-        min-height: 500px;
+    .nav-algn_c {
+        text-align: center;
+        display: none;
+        width: 0%;
     }
     .nav-algn_r {
-        padding-left: 120px;
+        padding-left: 0px;
+    }
+    .header-top {
+        background-size: cover;
+    }
+    .navbar-default .navbar-nav>li>a {
+        padding: 15px 15px;
+    }
+    .logo.displ_stn{
+        display: block;
+        text-align: left;
+    }
+    .logo.displ_stn h1 a{
+        font-size: 35px;
+    }
+    .head-top-text {
+        padding-top: 12em;
+    }
+    .navbar-default .navbar-toggle {
+        border: none !important;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #FFFDFD;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: rgba(221, 221, 221, 0);
     }
     .ft {
         padding: 0 !important;
@@ -846,24 +874,12 @@ div textarea{
         width: 0%;
     }
     .float-nav {
-        float: none !important;
+        : nfloatone !important;
         width: 100%;
         margin: 0 auto;
     }
     .nav-algn_r {
         padding-left: 0px;
-    }
-    .header-top {
-        background: url(../images/g2.jpg)0px 64px;
-        background-size: cover;
-        min-height: 415px;
-        position: relative;
-    }
-    .header-nav {
-        position: absolute;
-        right: 0%;
-        width: 100%;
-        z-index: 9;
     }
     .navbar-default .navbar-nav>li>a {
         padding: 15px 15px;
@@ -941,9 +957,6 @@ div textarea{
     }
 }
 @media screen and (max-width:480px){
-    .header-top {
-        min-height: 344px;
-    }
     .head-top-text {
         padding-top: 12em;
     }
@@ -1021,16 +1034,8 @@ div textarea{
     svg#bigTriangleColor {
         height: 35px;
     }
-    .header-top {
-        min-height: 316px;
-    }
     .head-top-text {
         padding-top: 7em;
-    }
-    .header-top {
-        min-height: 253px;
-        background: url(../images/g2.jpg)0px 52px;
-        background-size: cover;
     }
     .head-top-text h2 {
         font-size: 22px !important;
@@ -1210,4 +1215,44 @@ td {
 }
 .logo-header-nav>h1 a:hover {
     background-color: #B22929;
+}
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  border-radius: 50px;
+    -moz-border-radius: 50px;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.card-title {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.card-title a {
+   color: #FFF;
+}
+.card-title a:visited {
+   color: #FFF;
+}
+.card-title a:hover {
+  color: #800000;
+  text-decoration: none;
+}
+.card-text {
+  margin-bottom: 0;
+  text-align: center;
+  color: #FFF;
+}
+.card {
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  background-color: #000000;
+}
+.portfolio-item {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
