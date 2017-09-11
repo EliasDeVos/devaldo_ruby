@@ -12,7 +12,7 @@
       <% @galleries.each do |gallery| %>
         <tr>
           <td><%= gallery.title %></td>
-          <td><%= image_tag(gallery.image_url.to_s, :width => "200", :height => "200") %></td>
+          <td><%= image_tag(gallery.image_url.to_s,:class => "img-responsive", :width => "200", :height => "200") %></td>
           <td>
             <%= link_to 'Edit', edit_admin_gallery_path(gallery) %>
             <%= link_to 'Delete', admin_gallery_path(gallery), :method => :delete %>

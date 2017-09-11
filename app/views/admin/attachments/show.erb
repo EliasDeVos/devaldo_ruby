@@ -9,7 +9,7 @@
 </p>
 <p>
   <strong>Image:</strong>
-  <%= image_tag(@attachment.image_url.to_s, :width => "200", :height => "200") %>
+  <%= image_tag(@attachment.image_url.to_s, :class => "img-responsive") %>
 </p>
 <p>
   <%= link_to 'Index', admin_attachments_path %>
