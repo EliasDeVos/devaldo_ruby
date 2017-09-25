@@ -25,3 +25,6 @@
 #ignore public
 /public/*
 /public
+
+#ignore images
+/app/assets/images/*
