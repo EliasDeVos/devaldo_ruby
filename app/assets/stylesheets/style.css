@@ -275,6 +275,9 @@ a.hd-more:hover,a.hd-more:focus {
     width: 50%;
     margin-bottom: 25px;
 }
+.mov-container {
+    width: 100%;
+}
 .trainer-grid-text h4 {
     font-family: 'Nunito';
     font-weight: 400;
@@ -668,19 +671,10 @@ th, td{
     position: relative;
     padding: 0 !important;
     margin: 11px 0px 0px 11px;
-    width: 32.333333%;
+    width: 49%;
 }
 .work-grid img.img-responsive{
     width: 100%;
-}
-.rotate{
-    background: rgba(128, 19, 19, 0.72);
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    padding: 105px 0;
-    text-align: center;
-    display: none;
 }
 .gl-icn {
     font-size: 35px;
@@ -695,9 +689,6 @@ th, td{
     -moz-transition: 0.8s;
     -o-transition: 0.8s;
     transition: 0.8s;
-}
-.work-grid:hover .rotate{
-    display: block;
 }
 .nivo-lightbox-image img {
     margin-top: 120px;
