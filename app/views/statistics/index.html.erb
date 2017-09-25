@@ -5,10 +5,11 @@
             <p>
                 <strong>KGDP4H - reguliere competitie</strong>
             </p>
+            </br>
             <table class="table table-bordered klassement">
                 <tbody>
                     <tr>
-                        <th></th>
+                        <th>Ranking</th>
                         <th class="left">Ploeg</th>
                         <th class="">GS</th>
                         <th class="hidden-xs">W</th>
@@ -21,7 +22,7 @@
 
                     <% @statistics.each_with_index do |statistic, i| %>
                         <tr>
-                            <td class="right"><%= i%></td>
+                            <td class="right"><%= i+1%></td>
                             <td class="left"><%= statistic.name %></td>
                             <td class=""><%= statistic.games %></td>
                             <td class="hidden-xs"><%= statistic.wins %></td>
@@ -37,7 +38,7 @@
         </div>
         <% if !@games.empty? %>
             <h2>Matchen</h2>
-            <p></p>
+            </br>
             <table class="table table-bordered klassement">
                 <tbody>
                     <% @games.each do |game| %>
