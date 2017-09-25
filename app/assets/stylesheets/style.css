@@ -123,7 +123,7 @@ svg#bigTriangleColor {
     line-height: 1.8em;
 }
 .under-triangle {
-    margin-top: 100px;
+    margin-top: 120px;
 }
 a.hd-more {
     background-color: #151C22;
@@ -265,6 +265,16 @@ a.hd-more:hover,a.hd-more:focus {
 	opacity: 1;
 }
 /*--img-effects-ends--*/
+/*--jssor--*/
+.jssor-container {
+    background-color: black;
+    padding-top: 20px;
+}
+/*---jssor--ends--*/
+.match-report {
+    width: 50%;
+    margin-bottom: 25px;
+}
 .trainer-grid-text h4 {
     font-family: 'Nunito';
     font-weight: 400;
@@ -766,6 +776,10 @@ div textarea{
     .head-top-text h2 {
         font-weight: 400;
         font-size: 30px;
+    }
+    .match-report {
+        width: 80%;
+        margin-bottom: 25px;
     }
     .nutrn-grid {
         margin: 0px 9px 0px;
