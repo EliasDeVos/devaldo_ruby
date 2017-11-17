@@ -1,14 +1,15 @@
-<div class="stats-tabs">
+<div class="stats-tabs under-triangle">
     <div class="container">
         <div class="col-md-12">
             <h2>Klassement</h2>
             <p>
                 <strong>KGDP4H - reguliere competitie</strong>
             </p>
+            </br>
             <table class="table table-bordered klassement">
                 <tbody>
                     <tr>
-                        <th></th>
+                        <th>Ranking</th>
                         <th class="left">Ploeg</th>
                         <th class="">GS</th>
                         <th class="hidden-xs">W</th>
@@ -21,7 +22,7 @@
 
                     <% @statistics.each_with_index do |statistic, i| %>
                         <tr>
-                            <td class="right"><%= i%></td>
+                            <td class="right"><%= i+1%></td>
                             <td class="left"><%= statistic.name %></td>
                             <td class=""><%= statistic.games %></td>
                             <td class="hidden-xs"><%= statistic.wins %></td>
@@ -37,7 +38,7 @@
         </div>
         <% if !@games.empty? %>
             <h2>Matchen</h2>
-            <p></p>
+            </br>
             <table class="table table-bordered klassement">
                 <tbody>
                     <% @games.each do |game| %>
@@ -45,7 +46,7 @@
                             <td class="right" width="35%" valign="middle"><%= game.homeTeam %></td>
                             <td class="middle" width="20%" valign="middle"><%= game.score %></td>
                             <td class="left" width="35%" valign="middle"><%= game.awayTeam %></td>
-                            <td class="left" width="10%" valign="middle"><%= link_to 'View', game_path(game) %></td>
+                            <td class="left link" width="10%" valign="middle"><%= link_to 'Lees matchverslag', game_path(game) %></td>
                         </tr>
                     <% end %>
                 </tbody>

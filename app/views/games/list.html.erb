@@ -1,0 +1,17 @@
+<div class="container under-triangle">
+  <div class="row">
+    <% @games.each do |game| %>
+      <div class="col-lg-3 col-sm-4 portfolio-item">
+        <div class="card">
+          <a href="/games/<%= game.id %>"><%= image_tag(game.attachments.first.image_url.to_s, :class => "card-img-top") %>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="/games/<%= game.id %>"><%= game.homeTeam %> - <%= game.awayTeam %></a>
+            </h4>
+            <h5 class="card-text"><%= game.score %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

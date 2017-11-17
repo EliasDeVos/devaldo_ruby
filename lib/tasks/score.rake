@@ -5,7 +5,7 @@ namespace :score do
     require 'open-uri'
 
     puts 'scraping vmf'
-    url = 'http://www.ledenbeheer.vmf.be/Publicatie/Klassement?ReeksId=661'
+    url = 'http://www.ledenbeheer.vmf.be/Publicatie/Klassement?Clubnaam=Devaldo+Rojo'
     doc = Nokogiri::HTML(open(url))
     table = doc.css('table.klassement').first
     rows = table.css('tr')

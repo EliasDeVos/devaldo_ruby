@@ -1,0 +1,31 @@
+<div class="container text-center under-triangle">
+    <h1><%= @game.homeTeam %> - <%= @game.awayTeam %> (<%= @game.score %> )</h1>
+    <div>
+        <p>
+        <%= @game.description %>
+        </p>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h3>
+        Foto's
+    </h3>
+    <div>
+        <% @game.attachments.each do |attachment| %>
+            <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
+        <% end %>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h3>
+       Laat een reactie achter!
+    </h3>
+    <div class="js-messages" data-game-id="<%= @game.id %>">
+        <%= render @game.messages %>
+    </div>
+    <%= render 'messages/new', game: @game %>
+</div>

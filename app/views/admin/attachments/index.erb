@@ -24,7 +24,7 @@
       <% @attachments.each do |attachment| %>
         <tr>
           <td><%= attachment.name %></td>
-          <td><%= image_tag(attachment.image_url.to_s, :width => "200", :height => "200") %></td>
+          <td><%= image_tag(attachment.image_url.to_s, :width => "200", :height => "200", :class => "img-responsive") %></td>
           <td><%= attachment.game.name %></td>
           <td>
             <%= link_to 'Edit', edit_admin_attachment_path(attachment) %>

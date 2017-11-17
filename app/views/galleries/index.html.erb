@@ -1,24 +1,24 @@
-<div class="gallery">
-    <div class="container">
-        <h3>Gallery</h3>
-        <div class="gallery-grids">
-            <% @galleries.each do |gallery| %>
-                <div class="col-md-4 work-grid">
-                    <div id="nivo-lightbox-demo">
-                        <a  href="<%= gallery.image_url.to_s %>" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo">
-                            <%= image_tag(gallery.image_url.to_s, :class => "img-responsive") %>
-                            <div class="rotate">
-                                <span class="glyphicon glyphicon-search gl-icn" aria-hidden="true"></span>
-                            </div>
-                         </a>
-                    </div>
-                </div>
-            <% end %>
+<link href="nivo-lightbox.css" rel="stylesheet" type="text/css">
+<script src="nivo-lightbox.js"></script>
+<script>
+$(document).ready(function(){
+      $('a').nivoLightbox();
+});
+</script>
+
+<div class="gallery under-triangle">
+  <div class="container">
+    <div class="gallery-grids">
+      <ul class="row">
+      <% @galleries.each do |gallery| %>
+        <div class="col-md-4 work-grid">
+          <div id="nivo-lightbox-demo">
+            <a  href="<%= gallery.image_url.to_s %>" data-lightbox-gallery="gallery1" id="nivo-lightbox-demo">
+              <%= image_tag(gallery.image_url.to_s, :class => "img-responsive") %>
+            </a>
+          </div>
         </div>
+      <% end %>
     </div>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#nivo-lightbox-demo a').nivoLightbox({ effect: 'fade' });
-    });
-    </script>
+  </div>
 </div>
