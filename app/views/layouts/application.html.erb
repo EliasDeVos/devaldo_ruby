@@ -4,6 +4,11 @@
     <title>DevaldoRojo</title>
     <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
+    <meta name="title" content="Home | Devaldo Rojo">
+    <meta name="description" content="Gentse voetbal ploeg met veel potentieel">
+    <meta property="og:title" content="Home | Devaldo Rojo">
+    <meta property="og:description" content="Gentse voetbal ploeg met veel potentieel">
+    <meta property="og:image" content="images/Devaldo_Rojo.png">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,7 +17,7 @@
     <%= render 'layouts/header' %>
     <%= yield %>
   </body>
-  <footer>
+  <footer class="footer js-footer">
     <%= render 'layouts/footer' %>
   </footer>
 </html>
