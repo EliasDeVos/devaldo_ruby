@@ -25,7 +25,11 @@
         <tr>
           <td><%= attachment.name %></td>
           <td><%= image_tag(attachment.image_url.to_s, :width => "200", :height => "200", :class => "img-responsive") %></td>
-          <td><%= attachment.game.name %></td>
+          <% if attachment.game.present? %>
+            <td><%= attachment.game.name %></td>
+          <% else %>
+            <td>-</td>
+          <% end %>
           <td>
             <%= link_to 'Edit', edit_admin_attachment_path(attachment) %>
             <%= link_to 'Delete', admin_attachment_path(attachment), :method => :delete %>

@@ -1,3 +1,5 @@
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
 <div class="container-fluid">
     <h1>Edit Game</h1>
     <div>
@@ -16,7 +18,7 @@
             </div>
             <div class="form-group">
                 <%= p.label :description %>
-                <%= p.text_area :description, class: 'form-control' %>
+                <%= p.text_area :description, class: 'form-control tinymce', rows: 40, cols: 120 %>
             </div>
                 <%= p.submit 'Save game', class: 'btn btn-primary' %>
                 <%= link_to 'Back', admin_games_path, class: "btn btn-primary" %>
