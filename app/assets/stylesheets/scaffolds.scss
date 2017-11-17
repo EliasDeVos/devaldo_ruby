@@ -22,12 +22,23 @@ a {
   color: #FFF;
 
   &:visited {
+    color: #000;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.link a {
+  color: #FFF;
+
+  &:visited {
     color: #FFF;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #FFF;
   }
 }
 

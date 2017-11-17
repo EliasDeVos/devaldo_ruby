@@ -310,14 +310,14 @@ a.hd-more:hover,a.hd-more:focus {
     font-family: 'Nunito';
     font-weight: 400;
     font-size: 22px;
-    color: #0000;
+    color: #000;
     margin-bottom: 20px;
     text-transform: capitalize;
     text-align: left;
 }
 .border-text h5 {
     margin-bottom: 20px;
-    color: #0000;
+    color: #000;
     text-align: left;
     font-family: sans-serif;
     font-size: 15px;
@@ -368,60 +368,7 @@ div.re-pad2 {
     font-family: sans-serif;
     line-height: 1.8em;
 }
-/*--nutrition--*/
-.nutrition {
-    padding: 3em 0;
-    text-align: center;
-}
-.nutrition h3{
-    font-family: 'Nunito';
-    font-weight: 700;
-    font-size: 35px;
-    color: #2BC246;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.nutrn-text {
-    width: 90%;
-}
-.nutrn-icn{
-    width: 10%;
-}
-.nutrn-grid {
-    border: 2px solid #4AAC5B;
-    padding: 12px !important;
-    margin: 0px 9px 0px;
-    float: left;
-    width: 31.333% !important;
-    text-align: left;
-}
-.nutrn-text h4 {
-    font-family: 'Nunito';
-    font-weight: 400;
-    font-size: 22px;
-    color: #151c22;
-    margin-bottom: 15px;
-    text-transform: capitalize;
-}
-.nutrn-text p{
-    font-weight: 100;
-    font-size: 15px;
-    color: #747779;
-    line-height: 1.8em;
-    font-family: sans-serif;
-}
-.nutrn-icn {
-    text-align: center;
-    padding: 2em 0;
-}
-.nutrn-icon {
-    font-size: 35px;
-    color: #4AAC5B;
-}
-a.ft-log,a.ft-log:hover {
-    font-size: 30px !important;
-    text-decoration: none !important;
-}
+/*--cpyright--*/
 .cpyrt{
     text-align: center;
 }
@@ -442,53 +389,7 @@ a.ft-log,a.ft-log:hover {
     color: #2bc246;
     text-decoration: none;
 }
-ul.social{
-    list-style-type: none;
-    margin: 0;
-    padding: 32px 0px 0px;
-    text-align: right;
-}
-ul.social li{
-    margin: 0;
-    padding: 0;
-    display: inline;
-}
-ul.social li a{
-    background: url(../images/soc.png);
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-}
-ul.social li a.face{
-    background-position: 0px 0px;
-}
-ul.social li a.face:hover{
-    background-position: 0px 24px;
-}
-ul.social li a.twit{
-    background-position: -26px 0px;
-}
-ul.social li a.twit:hover{
-    background-position: -26px 24px;
-}
-ul.social li a.gplus{
-    background-position: -51px 0px;
-}
-ul.social li a.gplus:hover{
-    background-position: -51px 24px;
-}
-ul.social li a.inst{
-    background-position: -76px 0px;
-}
-ul.social li a.inst:hover{
-    background-position: -76px 24px;
-}
-ul.social li a.pint{
-    background-position: -101px 0px;
-}
-ul.social li a.pint:hover{
-    background-position: -101px 24px;
-}
+
 /*--statistics--*/
 table{
     border: 1px solid #000;
@@ -498,94 +399,13 @@ th, td{
     color: white;
     text-align: center;
 }
-/*--about--*/
-.about{
-    text-align: center;
-    padding: 3em 0em;
+
+/*-- simple_calendar --*/
+#calendar_td {
+    border-top: none;
+    color: #FFF;
 }
-.about h3 {
-    font-family: 'Nunito';
-    font-weight: 700;
-    font-size: 35px;
-    color: #2BC246;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.about-grid,.about-grid1{
-    text-align: left;
-}
-.about-grid h4,.about-grid1 h4 {
-    font-family: 'Nunito';
-    font-weight: 400;
-    font-size: 22px;
-    color: #151c22;
-    margin: 15px 0px;
-    text-transform: capitalize;
-}
-.about-grid1 h4 {
-    margin-bottom: 0 !important;
-}
-.about-grid p,.about-grid1 p{
-    font-weight: 100;
-    font-size: 14px;
-    color: #747779;
-    line-height: 1.8em;
-    font-family: sans-serif;
-    text-transform: capitalize;
-}
-.hist-text {
-    width: 85%;
-}
-.hist-icon {
-    width: 15%;
-}
-.history {
-    margin-top: 20px;
-}
-.hist-icn {
-    font-size: 20px;
-    padding: 3px 0;
-    color: #4AAC5B;
-}
-/*--circes--*/
-.about-circles {
-    padding: 3em 0;
-    background-color: #4AAC5B;
-    text-align: center;
-}
-.re_pstn1 {
-    width: 39%;
-    text-align: center;
-    margin: 0 auto;
-}
-.circle h4 {
-    font-family: 'Nunito';
-    font-weight: 400;
-    font-size: 22px;
-    color: #fff;
-    margin: 15px 0px;
-    text-transform: capitalize;
-}
-.circle p{
-    font-weight: 100;
-    font-size: 14px;
-    color: #fff;
-    line-height: 1.8em;
-    font-family: sans-serif;
-    text-transform: capitalize;
-}
-.ourteam {
-    padding: 3em 0;
-    text-align: center;
-}
-.ourteam h3{
-    font-family: 'Nunito';
-    font-weight: 700;
-    font-size: 35px;
-    color: #2BC246;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
+
 /*--image effects--*/
 .item{
 	float: none;
@@ -621,15 +441,6 @@ th, td{
     transition: all 0.5s ease-in;
     box-shadow: inset 0 0 0 0 rgba(0,0,0,0.6), inset 0 0 0 0px #1c252c, 0 0 10px rgba(0,0,0,0.3);
 }
-.pic1{
-	background: url('../images/ab3.jpg') no-repeat;
-}
-.pic2{
-	background: url('../images/ab4.jpg') no-repeat;
-}
-.pic3{
-	background: url('../images/ab5.jpg') no-repeat;
-}
 .team-grid{
     text-align: center;
 }
@@ -649,115 +460,7 @@ th, td{
     font-family: sans-serif;
     text-transform: capitalize;
 }
-/*--galery--*/
-.gallery {
-    padding: 3em 0 4em;
-    text-align: center;
-}
-.gallery h3{
-    font-family: 'Nunito';
-    font-weight: 700;
-    font-size: 35px;
-    color: #000000;
-    margin-bottom: 9px !important;
-    text-transform: capitalize;font-family: 'Nunito';
-    font-weight: 700;
-    font-size: 35px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.work-grid{
-    position: relative;
-    padding: 0 !important;
-    margin: 11px 0px 0px 11px;
-    width: 49%;
-}
-.work-grid img.img-responsive{
-    width: 100%;
-}
-.gl-icn {
-    font-size: 35px;
-    color: #fff;
-}
-.gl-icn:hover{
-    transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-    -webkit-transition: 0.8s;
-    -moz-transition: 0.8s;
-    -o-transition: 0.8s;
-    transition: 0.8s;
-}
-.nivo-lightbox-image img {
-    margin-top: 120px;
-}
-.nivo-lightbox-theme-default .nivo-lightbox-image img {
-    background: transparent !importatn;
-    -webkit-box-shadow: 0 !important;
-    -moz-box-shadow: 0 !important;
-    box-shadow: 0 !important;
-    border: 0 !important;
-}
-/*--contact--*/
-.contact{
-    padding: 3em 0em 4em;
-    text-align: center;
-}
-.contact h3{
-    font-family: 'Nunito';
-    font-weight: 700;
-    font-size: 35px;
-    color: #2BC246;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.map iframe{
-    width: 100%;
-    height: 300px;
-    margin-bottom: 20px;
-    border: none;
-}
-input.textbox{
-    border: none;
-    border:2px solid #4aac5b;
-    margin-top: 20px;
-    width: 100%;
-    padding: 15px;
-    outline: none;
-    font-weight: 100;
-    font-family: sans-serif;
-    color: #747779;
-}
-div textarea{  
-   border: none;
-    border:2px solid #4aac5b;
-    margin-top: 20px;
-    width: 100%;
-    padding: 15px;
-    font-weight: 100;
-    font-family: sans-serif;
-    color: #747779;
-    resize: none;
-    height: 200px;
-    outline: none;
-}
-.cont-btn {
-    background-color: #4AAC5B !important;
-    border: none;
-    border-radius: 0 !important;
-    margin-top: 20px;
-    color: #fff !important;
-    outline: none !important;
-    width: 15%;
-}
-.cont-btn:hover{
-    background: #2bc246 !important;
-    transition: 0.5s all;
-}
-.our-players h3,.stats-tabs h3,.nutrition h3,.about h3,.ourteam h3,.gallery h3,.contact h3{
-    font-weight: 400;
-}
+
 /*--responsive-starts-here--*/
 @media screen and (max-width:1024px){
     .nav-algn_r {

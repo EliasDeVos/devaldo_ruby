@@ -27,7 +27,7 @@
                    </div>
                     <p></p>
                 </div>
-            <% end %>
+            <% end %>`
         </div>
     </div>
 </div>
@@ -58,6 +58,37 @@
                 </div>
                 <div class="progress mr">
                   <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%= @statistic.losses.to_f / @statistic.games.to_f * 100 %>" aria-valuemin="0" aria-valuemax="<%= @statistic.games.to_f %>" style="width: 16%">
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="stats-tabs">
+        <div class="container">
+            <div class="col-md-6 pd stats">
+                <h4>Seizoen 2017-2018</h4>
+                <div class="border-text">
+                    <h5>Gewonnen</h5>
+                </div>
+                <div class="progress mr">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= (@statistic.wins.to_f / @statistic.games.to_f * 100) %>" aria-valuemin="0" aria-valuemax="<%= @statistic.games.to_f %>" style="width: <%= (@statistic.wins.to_f / @statistic.games.to_f * 100) %>%">
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+                <div class="border-text">
+                    <h5>Gelijk</h5>
+                </div>
+                <div class="progress mr">
+                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<%= @statistic.draws.to_f / @statistic.games.to_f * 100 %>" aria-valuemin="0" aria-valuemax="<%= @statistic.games.to_f %>" style="width: <%= (@statistic.losses.to_f / @statistic.games.to_f * 100) %>%">
+                    <span class="sr-only"></span>
+                  </div>
+                </div>
+                <div class="border-text">
+                    <h5>Verloren</h5>
+                </div>
+                <div class="progress mr">
+                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<%= @statistic.losses.to_f / @statistic.games.to_f * 100 %>" aria-valuemin="0" aria-valuemax="<%= @statistic.games.to_f %>" style="width: <%= (@statistic.draws.to_f / @statistic.games.to_f * 100) %>%">
                     <span class="sr-only"></span>
                   </div>
                 </div>
