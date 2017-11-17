@@ -3,7 +3,9 @@
     <% @games.each do |game| %>
       <div class="col-lg-3 col-sm-4 portfolio-item">
         <div class="card">
+          <% if game.attachments.first.present? %>
           <a href="/games/<%= game.id %>"><%= image_tag(game.attachments.first.image_url.to_s, :class => "card-img-top") %>
+          <% end %>
           <div class="card-body">
             <h4 class="card-title">
               <a href="/games/<%= game.id %>"><%= game.homeTeam %> - <%= game.awayTeam %></a>
