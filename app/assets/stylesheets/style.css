@@ -164,6 +164,9 @@ a.hd-more:hover,a.hd-more:focus {
     text-transform: capitalize;
 }
 /*--imge-ffeccts--*/
+#nivo-lightbox-demo img {
+  margin-top:30px;
+}
 .ch-item {
 	width: 100%;
 	height: 100%;
