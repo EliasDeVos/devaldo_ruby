@@ -23,7 +23,7 @@
 //= require cable
 
 function stickyFooter() {
-    var height = $('.js-footer').outerHeight(true);
+    var height = $('.js-footer').outerHeight(true) + 30;
 
     $('body').css('padding-bottom', height);
 }
@@ -33,5 +33,9 @@ $(window).on('load', function() {
 });
 
 $(window).on('resize', function() {
+    stickyFooter();
+});
+
+$(window).on('reload-sticky-footer', function() {
     stickyFooter();
 });
