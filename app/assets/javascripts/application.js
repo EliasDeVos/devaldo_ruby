@@ -28,8 +28,18 @@ function stickyFooter() {
     $('body').css('padding-bottom', height);
 }
 
+$( document ).on('turbolinks:load', function() {
+    stickyFooter();
+})
+
 $(window).on('load', function() {
     stickyFooter();
+    setTimeout(function(){ stickyFooter(); }, 1000);
+});
+
+$(window).on('ready', function() {
+    stickyFooter();
+    setTimeout(function(){ stickyFooter(); }, 1000);
 });
 
 $(window).on('resize', function() {
