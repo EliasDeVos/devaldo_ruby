@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h1>Show Game</h1>
+    <table class="table table-striped">
+        <tr>
+            <td>Home Team</td>
+            <td><%= @game.homeTeam %></td>
+       </tr>
+        <tr>
+            <td>Score</td>
+            <td><%= @game.score %></td>
+       </tr>
+        <tr>
+            <td>Away Team</td>
+            <td><%= @game.awayTeam %></td>
+       </tr>
+        <tr>
+            <td>Description</td>
+            <td><%= @game.description %></td>
+       </tr>
+   </table>
+    <div class="row">
+        <% @game.attachments.each do |attachment| %>
+            <div class="col-md-4">
+            <%= image_tag(attachment.image_url.to_s, :class => "img-responsive") %>
+            </div>
+        <% end %>
+    </div>
+    <p>
+      <%= link_to 'Index', admin_games_path, class: "btn btn-primary" %>
+    </p>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <h1>Meetings</h1>
+
+    <%= link_to 'New', new_admin_meeting_path, class: "btn btn-primary" %>
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @meetings.each do |meeting| %>
+        <tr>
+          <td><%= meeting.name %></td>
+          <td><%= meeting.start_time %></td>
+          <td><%= meeting.location %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_meeting_path(meeting) %>
+            <%= link_to 'Delete', admin_meeting_path(meeting), :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+</div>

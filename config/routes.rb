@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :players
     resources :galleries
     resources :games
+    resources :meetings
     resources :attachments
     get '/login', to: 'sessions#new'
     post '/login', to: 'sessions#create'

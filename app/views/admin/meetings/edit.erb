@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h1>Edit Meeting</h1>
+    <div>
+        <%= form_for @meeting, url:  admin_meeting_path do |p| %>
+            <div class="form-group">
+                <%= p.label :name %>
+                <%= p.text_field :name, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :startTime %>
+                <%= p.text_field :start_time, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+                <%= p.label :location %>
+                <%= p.text_field :location, class: 'form-control' %>
+            </div>
+                <%= p.submit 'Save meeting', class: 'btn btn-primary' %>
+                <%= link_to 'Back', admin_meetings_path, class: "btn btn-primary" %>
+            <p>
+            </p>
+        <% end %>
+    </div>
+</div>
